@@ -1,0 +1,140 @@
+===============================================================================
+ MAZEAPP TEST
+===============================================================================
+
+-------------------------------------------------------------------------------
+ 0. CONTENTS
+-------------------------------------------------------------------------------
+
+0. You're looking at it!
+1. Introduction
+2. Tests and Results
+
+
+-------------------------------------------------------------------------------
+ 1. INTRODUCTION
+-------------------------------------------------------------------------------
+
+Theses test are designed to demonstrate various important error-checking
+abilities of the MazeApp program.  Particularly, a check is done to
+ensure that the correct program invokation form is used (in other words, that
+the program is started using the correct command-line form).  The number
+of command line arguments is checked, as well as the form and validity.
+
+Tests are done to verify that the maze input files are in valid form and also
+to check whether a solution exists.  If a solution exists, it is found.  If a
+solution does not exist, this is reported.  A test is also done to ensure that
+a maze with no walls can be solved (that is, a maze outlined with walls, but
+with no inner walls).
+
+
+-------------------------------------------------------------------------------
+ 2. TESTS AND RESULTS
+-------------------------------------------------------------------------------
+
+TEST        : Program invokation form checking
+            : Command line argument form checking
+
+PURPOSE     : To ensure the program is started using the correct
+            : command-line argument form
+
+DESCRIPTION : This test deomonstrates the program's ability to recognize
+            : an invalid command-line invokation form.  This can result from
+            : an invalid number of command-line arguments, or invalid
+            : argument values.  Both cases are demonstrated.
+
+RESULT      : For the case of an invalid number of command line arguments:
+            :
+            : > ./MazeApp nonexistentFile.txt 34
+            : > Invalid argument form.
+            : Use form: 'MazeApp inputFile'
+            :
+            : This indicates that the number of arguments is invalid and
+            : shows the correct form.
+            :
+            : This behavior also occurs when an invalid file is passed as an
+            : argument (since the program cannot read in any valid entries).
+
+
+TEST        : Solving the maze example from the homework handout
+
+PURPOSE     : To demonstrate the successful traversal of a maze
+
+DESCRIPTION : This test demonstrates the successful traversal of a maze!
+            : Specifically, it finds the solution!
+
+RESULTS     : > ./MazeApp testMazeExample.txt
+            : > Welcome to Merlin's wizardry, your highness!
+            : > Reading secret map of "testMazeExample.txt" ...
+            : > Trying now to find a solution... Please be patient...
+            : > Here is the solution: N-W-W-W-W-N-N-N-N-E-N-N-W-N
+            : > The solution is maze form:
+            : > ********
+            : > **x**bb*
+            : > **ss**b*
+            : > ** s**b*
+            : > **ss**b*
+            : > **s***b*
+            : > **s***b*
+            : > **s***b*
+            : > **sssss*
+            : > ******e*
+            : > Thank you for using merlin's MazeApp.
+
+
+TEST        : Solving a maze with no walls
+
+PURPOSE     : To demonstrate the successful traversal of a maze with
+            : no walls
+
+DESCRIPTION : This test demonstrates the successful traversal of a maze!
+            : Specifically, it finds the solution!
+
+RESULTS     : > ./MazeApp testMazeEmpty1.txt
+            : > Welcome to Merlin's wizardry, your highness!
+            : > Reading secret map of "testMazeEmpty1.txt" ...
+            : > Trying now to find a solution... Please be patient...
+            : > Here is the solution: N-N-N-N-N-N-N-N-W-W-W-W-W-S-E-E-E-
+            :                         E-S-W-W-W-W-S-E-E-E-E-S-W-W-W
+            : > The solution is maze form:
+            : > ********
+            : > *ssssss*
+            : > *ssssss*
+            : > *ssssss*
+            : > *ssssss*
+            : > * xssss*
+            : > *     s*
+            : > *     s*
+            : > *     s*
+            : > ******e*
+            : Thank you for using merlin's MazeApp.
+
+
+TEST        : Identifying a maze with no solution
+
+PURPOSE     : To demonstrate the successful identification of a maze with
+            : no solution
+
+DESCRIPTION : This test demonstrates the successful indentification of a maze
+            : with no solution.
+
+RESULTS     : > ./MazeApp testMazeNoSolution.txt
+            : > Welcome to Merlin's wizardry, your highness!
+            : > Reading secret map of "testMazeNoSolution.txt" ...
+            : > Trying now to find a solution... Please be patient...
+            : > No solution can be found.  The dragon is too sneaky, and
+            : > it will surely eat you.
+            : > Thank you for using merlin's MazeApp.
+
+
+TEST        : MazeApp abnormal crashing behavior
+
+PURPOSE     : To demonstrate a case when the program crashes
+
+DESCRIPTION : This test was intended to show the program crashing, but...
+
+RESULTS     : None!
+
+
+Michael Gubbels
+March 4, 2007

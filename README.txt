@@ -1,8 +1,10 @@
-# MAZEAPP
+===============================================================================
+ MAZEAPP README
+===============================================================================
 
-Simple maze solver written in C++.
-
-## Contents
+-------------------------------------------------------------------------------
+ 0. CONTENTS
+-------------------------------------------------------------------------------
 
 0. You're looking at it!
 1. Files
@@ -13,12 +15,15 @@ Simple maze solver written in C++.
    b. Running
 3. Testing
 
-## File Hierarchy
+
+-------------------------------------------------------------------------------
+1. FILES
+   a. HEIRCHY
+-------------------------------------------------------------------------------
 
 The following is a file heirchy that represents the file/folder structure
 for the Record Reader program:
 
-```
 / (pwd)
 MazeApp.cpp
 MazeApp.h
@@ -32,12 +37,15 @@ testMazeNoSolution.txt
 Makefile
 README
 TEST
-```
+
 Details about these files are in 1b.
 
-## File Descriptions
 
-```
+-------------------------------------------------------------------------------
+1. FILES
+   b. DESCRIPTION
+-------------------------------------------------------------------------------
+
 FILENAME            TYPE/DESCRIPTION
 
 MazeApp.cpp         Source file.  Main program source file.
@@ -74,26 +82,25 @@ README              Text file.  You're reading it!  Contains information
 TEST                Text file.  Contains testing information and results.
                     Demonstrates program functionality for a variety of test
                     cases.
-```
 
-## Compiling
+
+-------------------------------------------------------------------------------
+2. COMPILING AND RUNNING
+   a. COMPILING
+-------------------------------------------------------------------------------
 
 To compile the program the following files are required:
 
-```
 MazeApp.cpp
 MazeApp.h
 MoveImp.cpp
 Move.h
 StackImp.cpp
 Stack.h
-```
 
 The following file is optional:
 
-```
 Makefile
-```
 
 The included makefile may be used to compile the program with a
 single command.  To use the makefile, the present work directory
@@ -101,9 +108,7 @@ must contain the files listed above as well as the makefile (named either
 'Makefile' or 'makefile').  To compile using the makefile, simply type the
 'make' command using the Linux or Unix terminal:
 
-```
 terminal> make
-```
 
 This will automatically compile and link the source files and create an
 executable binary file named 'MazeApp'.
@@ -111,25 +116,33 @@ executable binary file named 'MazeApp'.
 Alternatively, the program can be compiled and linked manually.  To do this
 from the Linux or Unix terminal, enter the following:
 
-```
 terminal> g++ -c MazeApp.cpp MoveImp.cpp
 terminal> g++ -o MazeApp MazeApp.o MoveImp.o
-```
 
 These steps will produce an executable binary file named 'MoveApp'.
 
 These steps are done assuming that no object files exist (if the object files
 exist from a previous compilation, errors may occur).
 
-## Running
+
+-------------------------------------------------------------------------------
+2. COMPILING AND RUNNING
+   b. COMPILING
+-------------------------------------------------------------------------------
 
 Provided that the program was successfully compiled (using one of the two
 methods described in 2a), it can be run by typing the following command:
 
-```
 terminal> ./MazeApp
-```
 
-## Testing
 
-For testing results, refer to `TEST` file (located in the same directory as this `README` file).
+-------------------------------------------------------------------------------
+3. TESTING
+-------------------------------------------------------------------------------
+
+For testing results, refer to TEST file (located in the same directory as this
+README file).
+
+
+Michael Gubbels
+March 4, 2007
